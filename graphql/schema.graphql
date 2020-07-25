@@ -1,0 +1,14 @@
+# 이 파일은 operation임. 여기서 정하는 규칙은, query를 어떻게 날려야 하는지를 정의하는 것임. 이 파일은 실제로 무엇을 수행하는 것은 아니고, 규칙만 정해줌.
+
+type Movie {
+  id: Int!
+  title: String!
+  rating: Float!
+  summary: String!
+  language: String!
+  medium_cover_image: String!
+}
+
+type Query {
+  movies(limit: Int, rating: Float): [Movie]!
+}
